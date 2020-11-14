@@ -8,8 +8,7 @@
 
 ---
 
-# Sprint 1 Scrum Report
-### Report Date: 11/13/2020
+### Scrum Sprint 1: 11/13/2020
 ##### Scrum Leader: Jacob Sowanick
 * Sprint Goal: Set up our Raspberry Pi's and gain familiarity with the hardware and possible software libraries that we will be using.
 * Product Log:
