@@ -14,14 +14,22 @@ class CameraModule:
     def __init__(self):
         self.camera = PiCamera()
         self.camera.framerate = 24
+        self.camera.resolution = (1920, 1088)
+        self.dimensions = self.camera.resolution
         
+    # Changes the dimensions of the camera
+    def resize(self, size):
+        if (type(size) == type((0,0))):
+            self.dimensions = size
+            self.camera.resolution = self.dimensions
+
     # Reads in an image from the camera
     # and returns it as a OpenCV
     # compatible image buffer
     def readbuf(self):
         sleep(2)
-        self.camera.resolution = (320, 240)
-        image = numpy.empty((240, 320, 3), dtype=numpy.uint8)
+        arraysize = (self.dimensions[1], self.dimensions[0], 3)
+        image = numpy.empty(arraysize, dtype=numpy.uint8)
         self.camera.capture(image, 'bgr')
         return image
 
