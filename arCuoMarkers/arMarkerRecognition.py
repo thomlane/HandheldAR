@@ -25,19 +25,23 @@ while True:
 
     # Detect the markers in the image
     markerCorners, markerIds, rejectedCandidates = cv.aruco.detectMarkers(frame, dictionary, parameters=parameters)
-    #if (markerIds != None):
-    #    print(markerIds)
-    print(markerCorners)
+
+    #for marker in markerCorners[0][0]
     if(markerCorners != [] or markerIds != None):
-        x = int(markerCorners[0][0][0][0])
-        y = int(markerCorners[0][0][0][1])
-        center = (x,y)
-        cv.circle(frame, center, 2, (0,255,0), 2)
-        text = str(markerIds[0][0])
-        cv.putText(frame,text,(x,y-10), cv.FONT_HERSHEY_SIMPLEX,
+        for i in range(0,len(markerCorners)):
+            x = int(markerCorners[i][0][0][0])
+            y = int(markerCorners[i][0][0][1])
+            cv.circle(frame, (x,y), 2, (0,255,0), 2)
+            
+            x = int(markerCorners[i][0][2][0])
+            y = int(markerCorners[i][0][2][1])
+            
+            cv.circle(frame, (x,y), 2, (255,0,0), 2)
+            text = str(markerIds[i][0])
+            cv.putText(frame,text,(x,y-10), cv.FONT_HERSHEY_SIMPLEX,
                     0.5, (0,0,255), 2)
-        print("Found marker " + text)
-        print("Top corner at " + str(x) + ", " + str(y))
+            print("Found marker " + text)
+            print("Top corner at " + str(x) + ", " + str(y))
         print("")
     
     # Display the resulting frame
