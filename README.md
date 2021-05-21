@@ -58,7 +58,7 @@ Run `pip install numpy`
   <li> Follow the above installation and compilations </li>
   <li> Clone the repository at https://github.com/thomlane/HandheldAR </li>
   <li> Navigate to the ArUcoMarkers Folder </li>
-  <li> Run `python3 ./arMarkerWrite.py <id>`  where id is the desired marker</li>
+  <li> Run `python3 ./arMarkerWrite.py [id]`  where id is the desired marker</li>
   <li> Print out the marker saved in folder markers or just open it on the monitor </li>
   <li> Navigate back to the ArUcoMarkers Folder </li>
   <li> Run `python3 ./arMarkerRecognition.py` and point the camera at the marker </li>
