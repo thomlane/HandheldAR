@@ -71,8 +71,11 @@ Run `pip install numpy`
 ### Archive
 #### QR Recognition
 Beginning of the project. Recognizes qr codes but cannot orient the marker
+#### Original ArUco Marker Recognition (arMarkerRecognition.py)
+<p> arMarkerRecognition.py activates the Pi's camera and start searching for markers in the frame. After finding a marker it will place circles in the top left and bottom right corners. The marker's ID will also be printed in the marker's bottom right corner. Archived after arUcoRecognition.py became a working improvement.</p>
 
 ### ArUcoMarkers
 <p> A folder of two files: </p>
 <p> arMarkerWrite.py takes in one argument, the id of marker. It will then produce a folder called markers in the same location as this file. </p>
-<p> arMarkerRecognition.py activates the Pi's camera and start searching for markers in the frame. After finding a marker it will place circles in the top left and bottom right corners. The marker's ID will also be printed in the marker's bottom right corner. </p>
+<p> arUcoRecognition.py finds all markers and saves them in a Marker object. It then outlines and labels each found marker. A pink dot was placed relative to the first and second found markers in order to show how to use the Marker object. </p>
+
