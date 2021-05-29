@@ -1,3 +1,10 @@
+#############################################################
+### This file was archived after many better functions were
+### found. It is still useful to show how to manage the
+### detectMarker return arrays without the classes I later
+### set up.
+#############################################################
+
 import cv2 as cv
 import numpy as np
 
